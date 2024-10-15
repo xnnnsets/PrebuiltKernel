@@ -38,7 +38,7 @@ jobs:
           git clone $REPO -b $BRANCH kernel 
           cd kernel
           rm -rf .git
-          bash build.sh
+          bash build_kernel.sh
           git clone https://"orkunergun":"${GITHUB_TOKEN}"@github.com/orkunergun/PrebuiltKernel push
           cp -r out/arch/arm64/boot/Image.gz push
           cd push
